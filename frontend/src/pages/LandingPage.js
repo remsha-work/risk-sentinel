@@ -1,4 +1,4 @@
-// src/pages/LandingPage.js - PERFECT CLEAN LANDING
+// src/pages/LandingPage.js - WITH STUNNING CSS ILLUSTRATION
 import React from 'react';
 
 export default function LandingPage({ navigate }) {
@@ -25,7 +25,18 @@ export default function LandingPage({ navigate }) {
         </div>
       </div>
       <div className="hero-right">
-        <div className="illustration-placeholder"></div>
+        <div className="dashboard-illustration">
+          <div className="chart-bar"></div>
+          <div className="chart-line"></div>
+          <div className="risk-metrics">
+            <div className="metric high"></div>
+            <div className="metric medium"></div>
+            <div className="metric low"></div>
+          </div>
+          <div className="dashboard-card"></div>
+          <div className="sidebar"></div>
+          <div className="glow-effect"></div>
+        </div>
       </div>
     </main>
   );
