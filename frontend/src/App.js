@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import LandingPage from './pages/LandingPage';
+import SignupPage from './pages/SignupPage';
+import LoginPage from './pages/LoginPage';
+import './styles/globals.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('landing');
+
+  const navigate = (page) => setCurrentPage(page);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentPage === 'landing' && <LandingPage navigate={navigate} />}
+      {currentPage === 'signup' && <SignupPage navigate={navigate} />}
+      {currentPage === 'login' && <LoginPage navigate={navigate} />}
     </div>
   );
 }
