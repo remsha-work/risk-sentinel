@@ -1,6 +1,4 @@
-// src/App.js - WORKS WITH YOUR PERFECT LOGIN
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
@@ -15,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* Navbar temporarily removed for Phase 1 */}
       {currentPage === 'landing' && <LandingPage navigate={navigate} />}
       {currentPage === 'login' && <LoginPage navigate={navigate} />}
       {currentPage === 'signup' && <SignupPage navigate={navigate} />}
